@@ -4,4 +4,4 @@
 
 This extension convert unixtime to the following format:
 
-"YYYY-MM-DD 18:48:13"
+"YYYY-MM-DD hh:mm:ss"
