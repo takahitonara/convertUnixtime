@@ -7,13 +7,31 @@ chrome.contextMenus.create({
 
         if ( ts.match(/^\d{10}$/) ) {
 	        var d = new Date( ts * 1000 );
-	        var year  = d.getFullYear();
-	        var month = d.getMonth() + 1;
-	        var day  = d.getDate();
-	        var hour = ( d.getHours()   < 10 ) ? '0' + d.getHours()   : d.getHours();
-	        var min  = ( d.getMinutes() < 10 ) ? '0' + d.getMinutes() : d.getMinutes();
-	        var sec   = ( d.getSeconds() < 10 ) ? '0' + d.getSeconds() : d.getSeconds();
-	        alert(year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec);
+	        
+	        // Get date data
+	        var year   = d.getFullYear();
+	        var month  = d.getMonth() + 1;
+	        var day    = d.getDate();
+	        var hour   = d.getHours();
+	        var minute = d.getMinutes();
+	        var second = d.getSeconds();
+	        
+	        // Set output string
+	        var output = '';
+	        
+	        output += year;
+	        output += '-';
+	        output += ( month  > 10 ) ? month  : '0' + month;
+	        output += '-';
+	        output += ( day    > 10 ) ? day    : '0' + day;
+	        output += ' ';
+	        output += ( hour   > 10 ) ? hour   : '0' + hour;
+	        output += ':';
+	        output += ( minute > 10 ) ? minute : '0' + minute;
+	        output += ':';
+	        output += ( second > 10 ) ? second : '0' + second;
+
+ 	        alert(output);
         } else {
         	alert("The selected string don't matches the Unixtime format.");
         }
