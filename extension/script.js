@@ -21,15 +21,15 @@ chrome.contextMenus.create({
 	        
 	        output += year;
 	        output += '-';
-	        output += ( month  > 10 ) ? month  : '0' + month;
+	        output += ( month  < 10 ) ? '0' + month  : month;
 	        output += '-';
-	        output += ( day    > 10 ) ? day    : '0' + day;
+	        output += ( day    < 10 ) ? '0' + day    : day;
 	        output += ' ';
-	        output += ( hour   > 10 ) ? hour   : '0' + hour;
+	        output += ( hour   < 10 ) ? '0' + hour   : hour;
 	        output += ':';
-	        output += ( minute > 10 ) ? minute : '0' + minute;
+	        output += ( minute < 10 ) ? '0' + minute : minute;
 	        output += ':';
-	        output += ( second > 10 ) ? second : '0' + second;
+	        output += ( second < 10 ) ? '0' + second : second;
 
  	        alert(output);
         } else {
