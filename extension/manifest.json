@@ -1,6 +1,6 @@
 {
 	"name": "Convert Unixtime",
-	"version": "1.0",
+	"version": "1.01",
 	"manifest_version": 2,
 	"description": "Convert Unixtime to Date format by selecting the context menu.",
 	"permissions": [
