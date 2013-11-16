@@ -5,6 +5,6 @@ This extension convert unixtime to the following format:
     YYYY-MM-DD hh:mm:ss (Local)
     YYYY-MM-DD hh:mm:ss (UTC)
     
-# LICENCE
+# LICENSE
 
 MIT License
